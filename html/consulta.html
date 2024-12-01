@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta</title>
-
     <link rel="stylesheet" href="../estilos.css">
-
-    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -31,69 +28,49 @@
         <section id="sintomatologia">
             <h3>Sintomatología</h3>
             <div class="contenido" id="contenidoSintomatologia">
-              
+                <textarea id="sintomas"></textarea>
             </div>
         </section>
         <section id="diagnostico">
             <h3>Diagnóstico</h3>
             <div class="contenido" id="contenidoDiagnostico">
-              
+                <textarea id="diagnostico"></textarea>
             </div>
         </section>
-        <section id="pedirCita">
+        <section id="medicacion">
             <h3>Medicación</h3>
-            <form id="formCita">
-                <label for="medico">Selecciona un médico:</label>
-                <select id="medico"></select>
-
+            <form id="formMedicacion">
+                <label for="medicamento">Selecciona un medicamento:</label>
+                <select id="medicamento"></select>
                 <label for="cantidad">Cantidad:</label>
                 <input type="text" id="cantidad" placeholder="Seleccione una cantidad">
-
                 <label for="frecuencia">Frecuencia:</label>
                 <input type="text" id="frecuencia" placeholder="Ejemplo: cada 8 horas">
-
                 <label for="duracion">Duración:</label>
                 <input type="text" id="duracion" placeholder="Ejemplo: 3 días">
-
                 <label for="cronica">¿Crónica?:</label>
                 <input type="checkbox" id="cronica">
-
                 <button type="button" id="btnAddMedicacion" class="btn">Añadir Medicación</button>
             </form>
-
             <h4>Medicamentos añadidos:</h4>
-            <ul id="listaMedicacion" class="contenido">
-
-            </ul>
+            <ul id="listaMedicacion" class="contenido"></ul>
         </section>
         <section id="subir">
             <h3>Subir PDF</h3>
-            <input type="file" name="" id="subirPdf">
+            <input type="file" id="subirPdf">
         </section>
-
         <section id="especialista">
             <h3>Derivar a especialista</h3>
-            <form id="formCita">
+            <form id="formEspecialista">
                 <label for="especialista">Selecciona el especialista:</label>
-                <select id="especialista">
-
-                </select>
-
-                <label for="fecha">Fecha de cita:</label>
-                <input type="date" id="fecha">
-
-
+                <select id="especialista"></select>
+                <label for="fechaEspecialista">Fecha de cita:</label>
+                <input type="date" id="fechaEspecialista">
                 <button type="button" id="btnAddCita" class="btn">Añadir Cita</button>
             </form>
         </section>
-
-
+        <button id="btnRegistrar" class="btn">Registrar</button>
     </main>
-
-
-
-
-
     <script src="../js/consulta.js"></script>
 </body>
 </html>
