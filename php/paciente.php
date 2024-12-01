@@ -64,7 +64,7 @@ function obtenerMedicacionActual() {
             JOIN medicamento ON cita_medicamento.id_medicamento = medicamento.id 
             JOIN cita ON cita_medicamento.id_cita = cita.id 
             JOIN paciente ON cita.id_paciente = paciente.id 
-            WHERE paciente.dni = '$dni' AND cita_medicamento.cronico = 1";
+            WHERE paciente.dni = '$dni'";
     $result = $conexion->query($sql);
     $data = [];
     while ($row = $result->fetch_assoc()) {

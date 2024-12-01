@@ -50,6 +50,7 @@ function obtenerConsultasPasadas() {
     fetch("../php/paciente.php?action=consultasPasadas")
         .then(response => response.json())
         .then(data => {
+            console.log("Consultas pasadas:", data); // Agregar este log para verificar los datos
             const listaConsultas = document.getElementById("listaConsultas");
             listaConsultas.innerHTML = "";
             data.forEach(consulta => {
