@@ -116,6 +116,7 @@ if (!verificarTabla($conexion, 'paciente_medico')) {
     // Insertar datos en la tabla 'paciente_medico'
     $insert_paciente_medico = "INSERT INTO paciente_medico (id_paciente, id_medico) VALUES 
         (1, 1),
+        (1, 2),
         (2, 2)";
     mysqli_query($conexion, $insert_paciente_medico) or die("Error al insertar datos en 'paciente_medico': " . mysqli_error($conexion));
 }
